@@ -23,7 +23,7 @@
   }
 
   #main_header #tabs ul li.selected {
-    background: url("../images/mobile-tab-bg.gif") repeat-x; 
+/*    background: url("../images/mobile-tab-bg.gif") repeat-x;  */
   }
 
   #main_header #tabs ul li.selected a {
