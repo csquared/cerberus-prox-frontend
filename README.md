@@ -11,4 +11,3 @@ and their permissions
 ## TODOs:
 
 - ldap integration
-- update schema cerberus-prox 1.2
