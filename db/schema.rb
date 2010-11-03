@@ -29,17 +29,19 @@ ActiveRecord::Schema.define(:version => 0) do
   add_index "access_log", ["logged", "card_id"], :name => "logged"
 
   create_table "card", :primary_key => "card_id", :force => true do |t|
-    t.string   "user",                         :null => false
+    t.string   "user",                     :null => false
     t.string   "nick"
-    t.string   "after_hours",     :limit => 0, :null => false
-    t.integer  "access_group_id",              :null => false
-    t.datetime "expires",                      :null => false
-    t.datetime "valid_from",                   :null => false
-    t.string   "disabled",        :limit => 0, :null => false
-    t.string   "magic",           :limit => 0, :null => false
+    t.string   "after_hours", :limit => 0, :null => false
+    t.datetime "expires",                  :null => false
+    t.datetime "valid_from",               :null => false
+    t.string   "disabled",    :limit => 0, :null => false
+    t.string   "magic",       :limit => 0, :null => false
   end
 
-  add_index "card", ["access_group_id"], :name => "access_group_id"
+  create_table "card_group", :force => true do |t|
+    t.string  "card_id",         :limit => 50, :null => false
+    t.integer "access_group_id",               :null => false
+  end
 
   create_table "door", :force => true do |t|
     t.string "name",             :limit => 50, :null => false
