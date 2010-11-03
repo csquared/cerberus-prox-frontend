@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  logged: 2010-09-27 21:13:52
+  door: MyString
+  action: MyString
+  detail: MyString
+
+two:
+  logged: 2010-09-27 21:13:52
+  door: MyString
+  action: MyString
+  detail: MyString

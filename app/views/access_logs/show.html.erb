@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Logged:</b>
+  <%= @access_log.logged %>
+</p>
+
+<p>
+  <b>Door:</b>
+  <%= @access_log.door %>
+</p>
+
+<p>
+  <b>Action:</b>
+  <%= @access_log.action %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @access_log.detail %>
+</p>
+
+
+<%= link_to 'Edit', edit_access_log_path(@access_log) %> |
+<%= link_to 'Back', access_logs_path %>

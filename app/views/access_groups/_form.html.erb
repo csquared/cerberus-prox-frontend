@@ -1,0 +1,21 @@
+<%= form_for(@access_group) do |f| %>
+  <% if @access_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@access_group.errors.count, "error") %> prohibited this access_group from being saved:</h2>
+
+      <ul>
+      <% @access_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

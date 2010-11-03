@@ -1,0 +1,45 @@
+  /** MAIN TABS - A list apart's tabs implementation. */
+  #main_header #tabs {
+    font-size: 1.16em;
+    line-height: normal;
+    width: 100%;
+  }
+
+  #main_header #tabs ul {
+    list-style: none;
+    text-align: left;
+    margin-left: -35px;
+  }
+
+  #main_header #tabs ul li {
+    background: #9EB0C6;
+    float: left;
+    font-weight: 1.2em;
+  }
+
+  #main_header #tabs ul.utils li {
+    float: right;
+    margin-right: 10px;
+  }
+
+  #main_header #tabs ul li.selected {
+    background: url("../images/mobile-tab-bg.gif") repeat-x; 
+  }
+
+  #main_header #tabs ul li.selected a {
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-decoration: underline;
+  }
+
+  #main_header #tabs ul li a {
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 5px 16px 5px 17px;
+    text-decoration: none;
+  }
+  /* MAIN TABS END */
+
+.clearfix { clear: both }

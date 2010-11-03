@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @card.user %>
+</p>
+
+<p>
+  <b>Nick:</b>
+  <%= @card.nick %>
+</p>
+
+<p>
+  <b>After hours:</b>
+  <%= @card.after_hours %>
+</p>
+
+<p>
+  <b>Expires:</b>
+  <%= @card.expires %>
+</p>
+
+<p>
+  <b>Valid from:</b>
+  <%= @card.valid_from %>
+</p>
+
+<p>
+  <b>Disabled:</b>
+  <%= @card.disabled %>
+</p>
+
+<p>
+  <b>Magic:</b>
+  <%= @card.magic %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

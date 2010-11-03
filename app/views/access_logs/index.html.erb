@@ -1,0 +1,27 @@
+<table>
+  <tr>
+    <th>Logged</th>
+    <th>Door</th>
+    <th>Action</th>
+    <th>Detail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @access_logs.each do |access_log| %>
+  <tr>
+    <td><%= access_log.logged %></td>
+    <td><%= access_log.door %></td>
+    <td><%= access_log.action %></td>
+    <td><%= access_log.detail %></td>
+    <td><%= link_to 'Show', access_log %></td>
+    <td><%= link_to 'Edit', edit_access_log_path(access_log) %></td>
+    <td><%= link_to 'Destroy', access_log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Access log', new_access_log_path %>

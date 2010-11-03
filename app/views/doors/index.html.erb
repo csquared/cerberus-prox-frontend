@@ -1,0 +1,23 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Default unlocked</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doors.each do |door| %>
+  <tr>
+    <td><%= door.name %></td>
+    <td><%= door.default_unlocked %></td>
+    <td><%= link_to 'Show', door %></td>
+    <td><%= link_to 'Edit', edit_door_path(door) %></td>
+    <td><%= link_to 'Destroy', door, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Door', new_door_path %>

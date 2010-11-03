@@ -1,0 +1,535 @@
+Script started on Tue 12 Oct 2010 07:34:08 PM CDT
+[0;34m(master)[0m~/projects/atxhs/ACDC/rails_cerberus$ exitwork6r2orkexit[Kscript/rails server
+=> Booting WEBrick
+=> Rails 3.0.0 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-10-12 19:34:21] INFO  WEBrick 1.3.1
+[2010-10-12 19:34:21] INFO  ruby 1.8.7 (2010-01-10) [x86_64-linux]
+[2010-10-12 19:34:34] INFO  WEBrick::HTTPServer#start: pid=4429 port=3000
+
+
+Started GET "/" for 127.0.0.1 at Tue Oct 12 19:35:09 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (18.6ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery
+Rendered dashboard/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 287ms (Views: 101.8ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:35:10 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:35:50 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.3ms)[0m  [1mSELECT `card`.* FROM `card`[0m
+Rendered cards/index.html.erb within layouts/application (59.4ms)
+Completed 200 OK in 87ms (Views: 79.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:35:50 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 19:35:59 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery
+Rendered dashboard/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 63ms (Views: 9.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:35:59 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:36:04 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT `card`.* FROM `card`[0m
+Rendered cards/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:36:04 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/access_groups" for 127.0.0.1 at Tue Oct 12 19:36:05 -0500 2010
+  Processing by AccessGroupsController#index as HTML
+  [1m[35mAccessGroup Load (0.8ms)[0m  SELECT `access_group`.* FROM `access_group`
+Rendered access_groups/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 77ms (Views: 51.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:36:05 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/doors" for 127.0.0.1 at Tue Oct 12 19:36:06 -0500 2010
+  Processing by DoorsController#index as HTML
+  [1m[36mDoor Load (0.8ms)[0m  [1mSELECT `door`.* FROM `door`[0m
+Rendered doors/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 81ms (Views: 61.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:36:06 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/access_logs" for 127.0.0.1 at Tue Oct 12 19:36:07 -0500 2010
+  Processing by AccessLogsController#index as HTML
+  [1m[35mAccessLog Load (0.8ms)[0m  SELECT `access_log`.* FROM `access_log`
+Rendered access_logs/index.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 158ms (Views: 143.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:36:07 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:37:24 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT `card`.* FROM `card`[0m
+Rendered cards/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:37:24 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/cards.xml" for 127.0.0.1 at Tue Oct 12 19:37:57 -0500 2010
+  Processing by CardsController#index as XML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Completed 200 OK in 118ms (Views: 111.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cards/" for 127.0.0.1 at Tue Oct 12 19:38:01 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[36mCard Load (0.2ms)[0m  [1mSELECT `card`.* FROM `card`[0m
+Rendered cards/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:38:02 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/cards/16-40289" for 127.0.0.1 at Tue Oct 12 19:38:08 -0500 2010
+  Processing by CardsController#show as HTML
+  Parameters: {"id"=>"16-40289"}
+  [1m[35mCard Load (0.3ms)[0m  SELECT `card`.* FROM `card` WHERE (`card`.`card_id` = '16-40289') LIMIT 1
+Rendered cards/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:38:08 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/cards/16-40289.xml" for 127.0.0.1 at Tue Oct 12 19:38:11 -0500 2010
+  Processing by CardsController#show as XML
+  Parameters: {"id"=>"16-40289"}
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT `card`.* FROM `card` WHERE (`card`.`card_id` = '16-40289') LIMIT 1[0m
+Completed 200 OK in 18ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:38:22 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 27ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:38:22 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards/show/1" for 127.0.0.1 at Tue Oct 12 19:39:08 -0500 2010
+
+ActionController::RoutingError (No route matches "/cards/show/1"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 19:39:43 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery[0m
+Rendered dashboard/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:39:43 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:39:51 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.2ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:39:51 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards/16-40289" for 127.0.0.1 at Tue Oct 12 19:39:58 -0500 2010
+  Processing by CardsController#show as HTML
+  Parameters: {"id"=>"16-40289"}
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT `card`.* FROM `card` WHERE (`card`.`card_id` = '16-40289') LIMIT 1[0m
+Rendered cards/show.html.erb within layouts/application (62.9ms)
+Completed 200 OK in 75ms (Views: 66.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:39:58 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:40:03 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:40:03 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/access_groups" for 127.0.0.1 at Tue Oct 12 19:41:12 -0500 2010
+  Processing by AccessGroupsController#index as HTML
+  [1m[36mAccessGroup Load (0.1ms)[0m  [1mSELECT `access_group`.* FROM `access_group`[0m
+Rendered access_groups/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:12 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 19:41:13 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery
+Rendered dashboard/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 21ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:14 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/doors" for 127.0.0.1 at Tue Oct 12 19:41:15 -0500 2010
+  Processing by DoorsController#index as HTML
+  [1m[36mDoor Load (0.2ms)[0m  [1mSELECT `door`.* FROM `door`[0m
+Rendered doors/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:15 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:41:18 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 78ms (Views: 72.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:18 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/access_groups" for 127.0.0.1 at Tue Oct 12 19:41:19 -0500 2010
+  Processing by AccessGroupsController#index as HTML
+  [1m[36mAccessGroup Load (0.1ms)[0m  [1mSELECT `access_group`.* FROM `access_group`[0m
+Rendered access_groups/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:19 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/access_logs" for 127.0.0.1 at Tue Oct 12 19:41:21 -0500 2010
+  Processing by AccessLogsController#index as HTML
+  [1m[35mAccessLog Load (0.3ms)[0m  SELECT `access_log`.* FROM `access_log`
+Rendered access_logs/index.html.erb within layouts/application (99.9ms)
+Completed 200 OK in 111ms (Views: 104.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:21 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 19:41:23 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery[0m
+Rendered dashboard/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:23 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 19:41:39 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:39 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 19:41:40 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery[0m
+Rendered dashboard/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 19ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 19:41:40 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 20:14:51 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:14:51 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/access_groups" for 127.0.0.1 at Tue Oct 12 20:14:53 -0500 2010
+  Processing by AccessGroupsController#index as HTML
+  [1m[36mAccessGroup Load (0.2ms)[0m  [1mSELECT `access_group`.* FROM `access_group`[0m
+Rendered access_groups/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 66ms (Views: 60.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:14:53 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 20:14:54 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:14:54 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 20:14:54 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery[0m
+Rendered dashboard/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:14:54 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/cards" for 127.0.0.1 at Tue Oct 12 20:21:31 -0500 2010
+  Processing by CardsController#index as HTML
+  [1m[35mCard Load (0.1ms)[0m  SELECT `card`.* FROM `card`
+Rendered cards/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 36ms (Views: 27.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:21:31 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/access_groups" for 127.0.0.1 at Tue Oct 12 20:21:32 -0500 2010
+  Processing by AccessGroupsController#index as HTML
+  [1m[36mAccessGroup Load (0.1ms)[0m  [1mSELECT `access_group`.* FROM `access_group`[0m
+Rendered access_groups/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:21:32 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/doors" for 127.0.0.1 at Tue Oct 12 20:21:33 -0500 2010
+  Processing by DoorsController#index as HTML
+  [1m[35mDoor Load (0.1ms)[0m  SELECT `door`.* FROM `door`
+Rendered doors/index.html.erb within layouts/application (68.4ms)
+Completed 200 OK in 80ms (Views: 73.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:21:33 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/access_logs" for 127.0.0.1 at Tue Oct 12 20:21:34 -0500 2010
+  Processing by AccessLogsController#index as HTML
+  [1m[36mAccessLog Load (0.1ms)[0m  [1mSELECT `access_log`.* FROM `access_log`[0m
+Rendered access_logs/index.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:21:34 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at Tue Oct 12 20:21:35 -0500 2010
+  Processing by DashboardController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) AS count_id FROM (SELECT 1 FROM `card` WHERE (`card`.`disabled` = 'N')) AS subquery
+Rendered dashboard/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/images/mobile-tab-bg.gif" for 127.0.0.1 at Tue Oct 12 20:21:36 -0500 2010
+
+ActionController::RoutingError (No route matches "/images/mobile-tab-bg.gif"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+e ^C[2010-10-12 20:40:42] INFO  going to shutdown ...
+[2010-10-12 20:40:42] INFO  WEBrick::HTTPServer#start done.
+Exiting
+[0;34m(master)[0m~/projects/atxhs/ACDC/rails_cerberus$ exit
+exit
+
+Script done on Tue 12 Oct 2010 08:40:44 PM CDT

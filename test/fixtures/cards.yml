@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: MyString
+  nick: MyString
+  after_hours: MyString
+  expires: 2010-09-27
+  valid_from: 2010-09-27
+  disabled: MyString
+  magic: MyString
+
+two:
+  user: MyString
+  nick: MyString
+  after_hours: MyString
+  expires: 2010-09-27
+  valid_from: 2010-09-27
+  disabled: MyString
+  magic: MyString
