@@ -3,9 +3,11 @@ Feature:
   As an admin
   I need to be able to create and edit cards
 
+  @selenium
   Scenario: Creating a new card
     Given I am logged in
     When I go to "the new card page"
+    And I press "Edit"
     And I fill in "ID" with "1337"
     And I fill in "User" with "User Name"
     And I fill in "Nick" with "yoozer"

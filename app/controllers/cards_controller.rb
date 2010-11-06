@@ -1,4 +1,6 @@
 class CardsController < ApplicationController
+  before_filter :adjust_card, :only => [:create, :update]
+
   def captured
     time = Time.parse(params[:capture_time])
     if((found = AccessLog.last_denied(time)) && found.card_id)
@@ -50,7 +52,6 @@ class CardsController < ApplicationController
   # POST /cards.xml
   def create
     @card = Card.new(params[:card])
-    @card.card_id = params[:card_id] || params[:hidden_card_id]
 
     respond_to do |format|
       if @card.save
@@ -89,5 +90,13 @@ class CardsController < ApplicationController
       format.html { redirect_to(cards_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private 
+  def adjust_card
+    params[:card][:card_id]     = params[:id] || params[:card_id] || params[:hidden_card_id]
+    params[:card][:magic]       = params[:card][:magic] == '1' ? 'Y' : 'N'
+    params[:card][:disabled]    = params[:card][:disabled] == '1' ? 'Y' : 'N'
+    params[:card][:after_hours] = params[:card][:after_hours] == '1' ? 'Y' : 'N'
   end
 end
