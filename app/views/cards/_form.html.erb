@@ -13,7 +13,7 @@
 
   <div class="field">
     <label for="card_id">ID</label><br />
-    <input type="input" id="card_id" name="card_id" disabled="true" />
+    <input type="input" id="card_id" name="card_id" disabled="true" value=""/>
     <input type="hidden" id="hidden_card_id" name="hidden_card_id" />
     <span id="card_capture">
       <button type="button">Capture Card</button>
@@ -55,4 +55,7 @@
       </td>
     </tr>
   </table>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>
