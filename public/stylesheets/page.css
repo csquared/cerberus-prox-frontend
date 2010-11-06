@@ -3,8 +3,7 @@ body {}
 table {
 font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
 font-size: 12px;
-margin: 45px;
-width: 480px;
+margin: 5px;
 text-align: left;
 border-collapse: collapse;
 }
@@ -27,7 +26,7 @@ color: #669;
 border-top: 1px solid transparent;
 }
 
-table tr:hover td {
+table.list tr:hover td {
 background: #d0dafd;
 color: #339;
 }
@@ -44,3 +43,5 @@ color: #339;
 .disabled {
   background-color: #f30;
 }
+
+#card_capture span { display: none }

@@ -1,4 +1,13 @@
 class CardsController < ApplicationController
+  def captured
+    time = Time.parse(params[:capture_time])
+    if((found = AccessLog.last_denied(time)) && found.card_id)
+      render :text => found.card_id 
+    else
+      head :not_found
+    end
+  end
+
   # GET /cards
   # GET /cards.xml
   def index
@@ -41,6 +50,7 @@ class CardsController < ApplicationController
   # POST /cards.xml
   def create
     @card = Card.new(params[:card])
+    @card.card_id = params[:card_id] || params[:hidden_card_id]
 
     respond_to do |format|
       if @card.save

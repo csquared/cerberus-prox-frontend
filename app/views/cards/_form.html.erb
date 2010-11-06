@@ -12,39 +12,47 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
+    <label for="card_id">ID</label><br />
+    <input type="input" id="card_id" name="card_id" disabled="true" />
+    <input type="hidden" id="hidden_card_id" name="hidden_card_id" />
+    <span id="card_capture">
+      <button type="button">Capture Card</button>
+      <span><img src="/images/ajax-loader.gif" />Swipe Card...</span>
+    </span>
+    <button id="edit_id" type="button">Edit</button>
+
   </div>
 
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :nick %><br />
-    <%= f.text_field :nick %>
-  </div>
-  <div class="field">
-    <%= f.label :after_hours %><br />
-    <%= f.text_field :after_hours %>
-  </div>
-  <div class="field">
-    <%= f.label :expires %><br />
-    <%= f.date_select :expires %>
-  </div>
-  <div class="field">
-    <%= f.label :valid_from %><br />
-    <%= f.date_select :valid_from %>
-  </div>
-  <div class="field">
-    <%= f.label :disabled %><br />
-    <%= f.text_field :disabled %>
-  </div>
-  <div class="field">
-    <%= f.label :magic %><br />
-    <%= f.text_field :magic %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <table>
+    <tr>
+      <td class="field">
+        <%= f.label :user %><br />
+        <%= f.text_field :user %>
+      </td>
+      <td class="field">
+        <%= f.label :nick %><br />
+        <%= f.text_field :nick %>
+      </td>
+    </tr>
+    <tr>
+      <td class="field">
+        <%= f.label :valid_from %><br />
+        <%= f.date_select :valid_from %>
+      </td>
+      <td class="field">
+        <%= f.label :expires %><br />
+        <%= f.date_select :expires %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <%= f.check_box :after_hours %>
+      <%= f.label :after_hours %>
+      <%= f.check_box :disabled %>
+      <%= f.label :disabled %>
+      <%= f.check_box :magic %>
+      <%= f.label :magic %>
+      </td>
+    </tr>
+  </table>
 <% end %>
