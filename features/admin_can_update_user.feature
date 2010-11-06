@@ -12,6 +12,10 @@ Feature:
     And I press "Create Card"
     Then I should see "Card was successfully created"
 
+    When I go to "the cards page"
+    And I follow "Edit"
+    Then the "card_id" field should contain "1337" 
+
   @selenium
   Scenario: Creating a new card and capture swipe
     Given I am logged in
@@ -22,4 +26,5 @@ Feature:
     And I wait "1" second 
     Then the "card_id" field should contain "1337" 
     And I should see "Card captured"
-    
+
+        
