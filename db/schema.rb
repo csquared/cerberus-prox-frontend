@@ -53,9 +53,10 @@ ActiveRecord::Schema.define(:version => 0) do
     t.integer "access_group_id", :null => false
   end
 
-  add_index "door", ["name"], :name => "name", :unique => true
+  add_index "door", ["name"], :name => "door_name", :unique => true
 
   add_index "door_access", ["access_group_id"], :name => "access_group_id"
+
   add_index "door_access", ["door_id"], :name => "door_id"
 
 end
