@@ -3,7 +3,11 @@ Feature:
   As an admin
   I need to be able to create and edit cards
 
-  @selenium
+  @javascript
+  Scenario: Fuck My Life
+    Given I am logged in
+  
+  @javascript
   Scenario: Creating a new card
     Given I am logged in
     When I go to "the new card page"
@@ -18,14 +22,14 @@ Feature:
     And I follow "Edit"
     Then the "card_id" field should contain "1337" 
 
-  @selenium
+  @javascript
   Scenario: Creating a new card and capture swipe
     Given I am logged in
     When I go to "the new card page"
     And I press "Capture Card"
     Then I should see "Swipe Card"
     When my card with code "1337" is denied 
-    And I wait "1" second 
+    And I wait "3" seconds 
     Then the "card_id" field should contain "1337" 
     And I should see "Card captured"
 

@@ -56,3 +56,7 @@ if defined?(ActiveRecord::Base)
   rescue LoadError => ignore_if_database_cleaner_not_present
   end
 end
+
+Capybara.register_driver :selenium do |app|
+  Capybara::Driver::Selenium.new(app, :browser => :chrome)
+end
