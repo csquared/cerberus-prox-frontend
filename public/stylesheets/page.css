@@ -37,11 +37,13 @@ color: #339;
 }
 
 .enabled {
-  background-color: #3f6;
+  background-color: #C8FF90;
+  font-weight: bold;
 }
 
 .disabled {
-  background-color: #f30;
+  background-color: #FFA27A;
+  font-weight: bold;
 }
 
 #card_capture span { display: none }

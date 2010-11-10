@@ -52,6 +52,7 @@ class CardsController < ApplicationController
   # POST /cards.xml
   def create
     @card = Card.new(params[:card])
+    @card.card_id = params[:card][:card_id]
 
     respond_to do |format|
       if @card.save

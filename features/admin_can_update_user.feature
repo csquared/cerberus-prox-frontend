@@ -29,4 +29,10 @@ Feature:
     Then the "card_id" field should contain "1337" 
     And I should see "Card captured"
 
-        
+#  Scenario: Editing a card
+#    Given I am logged in
+#    And there is a card with the following data:
+#    | card_id | user        | nick      | 
+#    | 1337    | Bob Jackson | bojangles |
+
+    

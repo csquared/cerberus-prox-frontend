@@ -15,7 +15,9 @@
     <td class="<%= card.disabled ? 'disabled' : 'enabled'%>">
       <%= card.user %>
     </td>
-    <td><%= card.nick %></td>
+    <td class="<%= card.disabled ? 'disabled' : 'enabled'%>">
+      <%= card.nick %>
+    </td>
     <td><%= card.after_hours ? "Y" : "N" %></td>
     <td><%= card.disabled ? "Y" : "N" %></td>
     <td><%= card.magic ? "Y" : "N" %></td>
