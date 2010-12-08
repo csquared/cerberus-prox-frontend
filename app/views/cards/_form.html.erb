@@ -20,7 +20,6 @@
       <span><img src="/images/ajax-loader.gif" />Swipe Card...</span>
     </span>
     <button id="edit_id" type="button">Edit</button>
-
   </div>
 
   <table>
@@ -58,4 +57,14 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <h2>Access Groups</h2>
+  <ul>
+  <% AccessGroup.all.each do |access_group| %> 
+      <li>
+        <%= label_tag access_group.name %>
+        <%= check_box_tag "access_groups[#{access_group.id}]", "1", @card.access_groups.include?(access_group)%>
+      </li>
+  <% end %>
+  </ul>
 <% end %>
