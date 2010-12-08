@@ -58,5 +58,5 @@ if defined?(ActiveRecord::Base)
 end
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Driver::Selenium.new(app, :browser => :chrome)
+  Capybara::Driver::Selenium.new(app, :browser => :firefox)
 end

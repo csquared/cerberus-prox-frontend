@@ -62,7 +62,7 @@
   <ul>
   <% AccessGroup.all.each do |access_group| %> 
       <li>
-        <%= label_tag access_group.name %>
+        <%= label_tag "access_groups[#{access_group.id}]", access_group.name %>
         <%= check_box_tag "access_groups[#{access_group.id}]", "1", @card.access_groups.include?(access_group)%>
       </li>
   <% end %>

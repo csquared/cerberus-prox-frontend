@@ -56,6 +56,7 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
+        update_access_groups
         format.html { redirect_to(@card, :notice => 'Card was successfully created.') }
         format.xml  { render :xml => @card, :status => :created, :location => @card }
       else

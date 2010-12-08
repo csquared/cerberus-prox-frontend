@@ -9,3 +9,6 @@ When /^I wait "([^"]*)" seconds$/ do |seconds|
   sleep(seconds.to_i)
 end
 
+Given /^there is an Access group called "([^"]*)"$/ do |name|
+  AccessGroup.create!(:name => name)
+end

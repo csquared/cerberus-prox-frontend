@@ -7,6 +7,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
+    when /cards page/
+      '/cards'
 
     when /the home\s?page/
       '/'
