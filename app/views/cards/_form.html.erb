@@ -16,8 +16,8 @@
     <input type="input" id="card_id" name="card_id" disabled="true" value="<%=@card.id || params[:card_id]%>"/>
     <input type="hidden" id="hidden_card_id" name="hidden_card_id" value="<%= params[:card_id] %>"/>
     <span id="card_capture">
-      <button type="button">Capture Card</button>
       <span><img src="/images/ajax-loader.gif" />Swipe Card...</span>
+      <button type="button">Capture Card</button>
     </span>
     <button id="edit_id" type="button">Edit</button>
   </div>
