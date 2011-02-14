@@ -1,5 +1,6 @@
 class AccessLog < ActiveRecord::Base
   set_table_name :access_log
+  belongs_to :card
 
   scope :all_last_denied, lambda { |time| 
     {:conditions => ["action = :action AND (logged > :capture_time)", 

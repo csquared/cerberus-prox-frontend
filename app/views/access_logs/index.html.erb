@@ -1,32 +1,27 @@
 <table>
   <tr>
-    <th>Logged</th>
-    <th>Door</th>
+    <th>User</th>
     <th>Action</th>
-    <th>Detail</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Door</th>
+    <th>Date</th>
     <th></th>
   </tr>
 
 <% @access_logs.each do |access_log| %>
   <tr>
-    <td><%= access_log.logged %></td>
-    <td><%= access_log.door %></td>
+    <td>
+      <% if card = access_log.card %>
+         <%= access_log.card.user %>
+      <% else %>
+         <%= access_log.card_id %><br/>
+	       <%=  link_to 'Add Card',new_card_path(:card_id=>access_log.card_id) %>
+      <% end %>
+    </td>
     <td><%= access_log.action %></td>
-    <td><%= access_log.detail %></td>
+    <td><%= access_log.door %></td>
+    <td><%= access_log.logged.strftime('%b %e, %l:%M %p') %></td>
     <td><%= link_to 'Show', access_log %></td>
-    <td><%= link_to 'Edit', edit_access_log_path(access_log) %></td>
-    <td><%= link_to 'Destroy', access_log, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><% if access_log.action.eql? "DENY" %>
-	  <%=  link_to 'Add Card',new_card_path(:card_id=>access_log.card_id) %>
-	<% end %></td>
   </tr>
 
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Access log', new_access_log_path %>

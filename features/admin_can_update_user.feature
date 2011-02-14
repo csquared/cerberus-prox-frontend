@@ -4,10 +4,6 @@ Feature:
   I need to be able to create and edit cards
 
   @javascript
-  Scenario: Fuck My Life
-    Given I am logged in
-  
-  @javascript
   Scenario: Creating a new card
     Given I am logged in
     When I go to "the new card page"
@@ -33,11 +29,16 @@ Feature:
     Then the "card_id" field should contain "1337" 
     And I should see "Card captured"
 
-
-#  Scenario: Editing a card
-#    Given I am logged in
-#    And there is a card with the following data:
-#    | card_id | user        | nick      | 
-#    | 1337    | Bob Jackson | bojangles |
-
-    
+  Scenario: Editing a card
+    Given I am logged in
+    And there are cards with the following data:
+    | card_id | user        | nick      | 
+    | 1337    | Bob Jackson | bojangles |
+    And I go to "the home page"
+    And I follow "cards"
+    And I follow "Edit"
+    When I fill in "User" with "User Name"
+    And I press "Update Card"
+    And I follow "Back"
+    Then I should see "User Name"
+    And I should not see "Bob Jackson"

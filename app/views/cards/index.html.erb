@@ -1,9 +1,8 @@
 <table>
   <tr>
+    <th>Card ID</th>
     <th>User</th>
     <th>Nick</th>
-    <th>After hours</th>
-    <th>Disabled</th>
     <th>Magic</th>
     <th></th>
     <th></th>
@@ -11,15 +10,12 @@
   </tr>
 
 <% @cards.each do |card| %>
-  <tr>
-    <td class="<%= card.disabled ? 'disabled' : 'enabled'%>">
-      <%= card.user %>
+  <tr id="<%= card.id %>" >
+    <td class="<%= card.disabled ? 'disabled' : 'enabled'%>" >
+      <%= card.id %>
     </td>
-    <td class="<%= card.disabled ? 'disabled' : 'enabled'%>">
-      <%= card.nick %>
-    </td>
-    <td><%= card.after_hours ? "Y" : "N" %></td>
-    <td><%= card.disabled ? "Y" : "N" %></td>
+    <td><%= card.user %></td>
+    <td><%= card.nick %></td>
     <td><%= card.magic ? "Y" : "N" %></td>
     <td><%= link_to 'Show', card %></td>
     <td><%= link_to 'Edit', edit_card_path(card) %></td>

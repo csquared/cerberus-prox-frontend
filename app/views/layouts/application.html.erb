@@ -13,9 +13,9 @@
     <ul>
       <li class="<%= tab_selected?('dashboard')%>"><%= link_to 'dashboard', :controller => 'dashboard' %></li>
       <li class="<%= tab_selected?('cards')%>"><%= link_to "cards", :controller => 'cards'%></li>
-      <li class="<%= tab_selected?('access_groups')%>"><%= link_to "groups", :controller => 'access_groups' %></li>
+      <li class="<%= tab_selected?('access_logs')%>"><%= link_to "access log", :controller => 'access_logs' %></li>
+      <li class="<%= tab_selected?('access_groups')%>"><%= link_to "access groups", :controller => 'access_groups' %></li>
       <li class="<%= tab_selected?('doors')%>"><%= link_to "doors", :controller => 'doors' %></li>
-      <li class="<%= tab_selected?('access_logs')%>"><%= link_to "swipes", :controller => 'access_logs' %></li>
     </ul>
   </div>
 </div>

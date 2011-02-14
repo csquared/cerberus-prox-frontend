@@ -16,17 +16,17 @@ Capture.get_capture_at = function(time){
     data: {'capture_time' : time.toString()},
     type: "POST",
     success: function(data, testStatus, xhr){
-      $('#card_capture button').text('Card captured!')
-      $('#card_capture button').show()
-      $('#card_capture span').hide()
-      $('#card_id,#hidden_card_id').val(data)
+      if(data.match("NOT FOUND")){
+        setTimeout("Capture.get_capture_at('" + time.toString() + "')", 500)
+      }else{
+        $('#card_capture button').text('Card captured!')
+        $('#card_capture button').show()
+        $('#card_capture span').hide()
+        $('#card_id,#hidden_card_id').val(data)
+      }
     },
     error: function(xhr, test, thrown){
-      if(xhr.status == 500){
-        $('#card_capture span').text("Server Error")  
-      }else{
-        setTimeout("Capture.get_capture_at('" + time.toString() + "')", 500)
-      }
+      $('#card_capture span').text("Server Error")  
     }
   })
 }

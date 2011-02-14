@@ -6,7 +6,7 @@ class CardsController < ApplicationController
     if((found = AccessLog.last_denied(time)) && found.card_id)
       render :text => found.card_id 
     else
-      head :not_found
+      render :text => "NOT FOUND"
     end
   end
 
