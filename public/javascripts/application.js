@@ -17,7 +17,7 @@ Capture.get_capture_at = function(time){
     type: "POST",
     success: function(data, testStatus, xhr){
       if(data.match("NOT FOUND")){
-        setTimeout("Capture.get_capture_at('" + time.toString() + "')", 500)
+        setTimeout("Capture.get_capture_at('" + time.toString() + "')", 2000)
       }else{
         $('#card_capture button').text('Card captured!')
         $('#card_capture button').show()
