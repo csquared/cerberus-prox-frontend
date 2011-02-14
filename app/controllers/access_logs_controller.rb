@@ -2,7 +2,7 @@ class AccessLogsController < ApplicationController
   # GET /access_logs
   # GET /access_logs.xml
   def index
-    @access_logs = AccessLog.all
+    @access_logs = AccessLog.order("logged DESC").all
 
     respond_to do |format|
       format.html # index.html.erb
