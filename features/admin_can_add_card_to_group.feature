@@ -3,6 +3,12 @@ Feature:
   As an admin
   I need to be able to add users to an Access Group
 
+  Scenario: Link to add card on the homepage
+    Given I go to "the home page"
+    When I follow "new Card"
+    Then I should see "New card"
+    And I should see "Capture Card" 
+
   @javascript
   Scenario: Adding a card with an access group
     Given there is an Access group called "Front Door"
