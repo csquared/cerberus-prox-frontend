@@ -2,7 +2,9 @@ class CardsController < ApplicationController
   before_filter :adjust_card, :only => [:create, :update]
 
   def captured
-    time = Time.parse(params[:capture_time])
+    time = params[:capture_time]
+    time = time.gsub(/GMT.*/,'UTC') if Rails.env.production?
+    time = Time.parse(time)
     if((found = AccessLog.last_denied(time)) && found.card_id)
       render :text => found.card_id 
     else

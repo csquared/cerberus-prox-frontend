@@ -3,7 +3,6 @@ class AccessLog < ActiveRecord::Base
   belongs_to :card
 
   scope :all_last_denied, lambda { |time| 
-    time = time.gsub(/GMT.*/,'UTC') if Rails.env.production?
     {:conditions => ["action = :action AND (logged > :capture_time)", 
                     {:action => "DENY", 
                      :capture_time => time}], 
