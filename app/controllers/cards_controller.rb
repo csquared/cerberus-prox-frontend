@@ -38,6 +38,8 @@ class CardsController < ApplicationController
   # GET /cards/new.xml
   def new
     @card = Card.new
+    @card.valid_from = 2.day.ago
+    @card.expires    = 1.year.from_now
 
     respond_to do |format|
       format.html # new.html.erb
