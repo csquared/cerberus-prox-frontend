@@ -8,6 +8,12 @@ Feature:
     When I follow "new Card"
     Then I should see "New card"
     And I should see "Capture Card" 
+  
+  Scenario: Forgot an ID  
+    Given I go to "the new card page" 
+    And I fill in "User" with "User Name"
+    And I press "Create Card"
+    Then I should see "Card ID can't be blank"
 
   @javascript
   Scenario: Adding a card with an access group

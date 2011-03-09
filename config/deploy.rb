@@ -12,7 +12,7 @@ set :application, "cerberus_prox_frontend"
 default_run_options[:pty] = true  # for git
 ssh_options[:forward_agent] = true
 
-set :repository, "git@github.com:csquared/cerberus-prox-frontend.git"
+set :repository, "git://github.com/csquared/cerberus-prox-frontend.git"
 set :scm, "git"
 set :user, "csquared"  # The server's user for deploys
 set :branch, "master" 
