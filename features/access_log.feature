@@ -14,3 +14,6 @@ Feature:
     Then I should see "Bob Jackson"
     And I should see "1338"
     And I should see "Add Card"
+
+    When I follow "Show"
+    Then I should see /133[7|8]/
