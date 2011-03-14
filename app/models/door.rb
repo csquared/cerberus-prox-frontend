@@ -10,4 +10,25 @@ class Door < ActiveRecord::Base
   def set_default_unlocked
     self.default_unlocked ||= 'N'  
   end
+
+  include HTTParty
+
+  def self.open(door_name)
+    raise "no door name given" if door_name.empty?
+    self.post('/xml-rpc/', :body => open_door_body(door_name))
+  end
+
+  def self.open_door_body(door_name)
+    return <<-XML.strip
+    <?xml version="1.0"?>
+    <methodCall>
+       <methodName>DoorControl.openDoor</methodName>
+       <params>
+          <param>
+             <value><string>#{door_name}</string></value>
+           </param>
+        </params>
+    </methodCall>
+    XML
+  end 
 end

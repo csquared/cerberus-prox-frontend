@@ -1,6 +1,8 @@
 CerberusFrontend::Application.routes.draw do
 
   match 'access_logs/timeline' => 'access_logs#timeline'
+  match 'cards/captured' => "cards#captured"
+  match 'door/open/:door' => "doors#open"
 
   resources :access_groups
 
@@ -10,7 +12,6 @@ CerberusFrontend::Application.routes.draw do
 
   resources :cards
 
-  match 'cards/captured' => "cards#captured"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

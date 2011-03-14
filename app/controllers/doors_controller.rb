@@ -1,4 +1,8 @@
 class DoorsController < ApplicationController
+  def open
+    render :text => Door.open(params[:door])
+  end
+
   # GET /doors
   # GET /doors.xml
   def index

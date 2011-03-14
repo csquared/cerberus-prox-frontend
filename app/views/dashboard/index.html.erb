@@ -7,11 +7,24 @@
 
 <h3>Shortcuts</h3>
 <ul>
-<li>
-  Add a <%= link_to 'new Card', new_card_path %>
-</li>
+  <li>
+    Add a <%= link_to 'new Card', new_card_path %>
+  </li>
 
-<li> 
-  View the <%= link_to 'Access Log', :controller => 'access_logs', :action => "timeline" %> 
-</li>
+  <li> 
+    View the <%= link_to 'Access Log', :controller => 'access_logs', :action => "timeline" %> 
+  </li>
+
+  <% Door.all.each do |door| %>
+   <li><a href="#" class="open_door" id="<%= door.name %>">Open the <%= door.name %></a></li>
+  <% end %>
 </ul>
+
+<script>
+  $(function(){
+    $('.open_door').click(function(event){
+      event.preventDefault();
+      $.get('/door/open/' + $(this).attr('id'))
+    })
+  })
+</script>

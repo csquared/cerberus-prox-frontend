@@ -17,7 +17,3 @@ end
 Given /^there is an Access group called "([^"]*)"$/ do |name|
   AccessGroup.create!(:name => name)
 end
-
-Given /^there is a door called "([^"]*)"$/ do |name|
-  Door.create!(:name => name)
-end
