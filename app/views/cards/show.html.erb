@@ -38,3 +38,33 @@
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
+
+<h3>Access Groups</h3>
+<ul>
+  <% @card.access_groups.each do |access_group| %>
+  <li><%= access_group.name %></li>
+</ul>
+
+<h3>Access Log</h3>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Door</th>
+    <th>Action</th>
+    <th>Reason</th>
+  </tr>
+  
+  <% @card.access_logs.order("logged").each do |access_log| %>
+    <tr>
+      <td><%= access_log.logged.strftime('%b %e, %l:%M %p') %></td>
+      <td><%= access_log.action %></td>
+      <td><%= access_log.door %></td>
+      <td>
+        <% if access_log.action == 'DENY' %>
+        <%= !has_access?(access_log) ? "doesn't have access to #{access_log.door}" : 
+                                       "unknown" %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

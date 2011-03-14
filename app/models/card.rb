@@ -5,6 +5,7 @@ class Card < ActiveRecord::Base
 
   has_many :card_groups
   has_many :access_groups, :through => :card_groups  
+  has_many :access_logs
 
   ['after_hours', 'magic', 'disabled'].each do |field|
     class_eval %{
