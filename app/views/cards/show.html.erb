@@ -39,11 +39,10 @@
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
 
-<h3>Access Groups</h3>
-<ul>
-  <% @card.access_groups.each do |access_group| %>
-  <li><%= access_group.name %></li>
-</ul>
+<br/><br/>
+
+<h3>Access Groups:</h3>
+<%= @card.access_groups.map(&:name).join(", ") %>
 
 <h3>Access Log</h3>
 <table>
@@ -61,8 +60,7 @@
       <td><%= access_log.door %></td>
       <td>
         <% if access_log.action == 'DENY' %>
-        <%= !has_access?(access_log) ? "doesn't have access to #{access_log.door}" : 
-                                       "unknown" %>
+        <%= !has_access?(access_log) ? "doesn't have access to #{access_log.door}" :  "unknown" %>
         <% end %>
       </td>
     </tr>

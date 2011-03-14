@@ -1,6 +1,6 @@
-class AccessLogsController < ApplicationController
+class AccessLogsController < ApplicationController 
   def timeline
-    @access_logs = AccessLog.order("logged DESC").all
+    @access_logs = AccessLog.order("logged DESC").limit('200').all
 
     respond_to do |format|
       format.html 
@@ -10,7 +10,7 @@ class AccessLogsController < ApplicationController
   # GET /access_logs
   # GET /access_logs.xml
   def index
-    @access_logs = AccessLog.order("logged DESC").all
+    @access_logs = AccessLog.order("logged DESC").limit('200').all
 
     respond_to do |format|
       format.html # index.html.erb
