@@ -1,4 +1,6 @@
 CerberusFrontend::Application.routes.draw do
+  match 'access_logs/timeline' => 'access_logs#timeline'
+
   resources :access_groups
 
   resources :access_logs

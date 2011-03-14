@@ -1,4 +1,12 @@
 class AccessLogsController < ApplicationController
+  def timeline
+    @access_logs = AccessLog.order("logged DESC").all
+
+    respond_to do |format|
+      format.html 
+    end
+  end
+
   # GET /access_logs
   # GET /access_logs.xml
   def index

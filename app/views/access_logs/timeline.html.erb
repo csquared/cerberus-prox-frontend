@@ -1,0 +1,88 @@
+<!-- OMG THIS IS SOOOOOO HACKY -->
+
+<% content_for :head do %>
+  <!-- Load the Timeline library after reseting the fonts, etc -->
+  <script src="http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js?bundle=true" type="text/javascript"></script>
+<% end %>
+
+  <script>
+
+var timeline_data = {  // save as a global variable
+'dateTimeFormat': 'iso8601',
+'wikiURL': "/access_log",
+'wikiSection': "Hackerspace Accesses",
+
+'events' : [
+/*
+        {'start': '20',
+        'end': '2153',
+        'title': 'Landschaft bei Montreuil',
+        'description': 'by Albert Gleizes, French Painter, 1881-1953',
+        'image': 'http://images.allposters.com/images/mer/1336_b.jpg',
+        'link': 'http://www.allposters.com/-sp/Landschaft-bei-Montreuil-Posters_i339007_.htm',
+        'isDuration' : true,
+        'icon' : "dark-red-circle.png",        
+        'color' : 'red',
+        'textColor' : 'green'},
+*/
+
+      <% @access_logs.each do |access_log| %>
+        {'start': '<%= access_log.logged.iso8601 %>',
+         'title': '<%= access_log.action %> <%= access_log.card ? access_log.card.nick : access_log.card_id %>',
+         'description' : ' <%=access_log.card_id %>' }
+        <%= ',' unless @access_logs.last == access_log %>
+      <% end %>
+
+  ]
+}
+</script>
+
+<script>        
+  var tl;
+  $(function () {
+      var tl_el = document.getElementById("tl");
+      var eventSource1 = new Timeline.DefaultEventSource();
+      
+      var theme1 = Timeline.ClassicTheme.create();
+      theme1.autoWidth = true; // Set the Timeline's "width" automatically.
+                               // Set autoWidth on the Timeline's first band's theme,
+                               // will affect all bands.
+      var d = new Date; //Timeline.DateTime.parseGregorianDateTime("1900")
+
+      theme1.timeline_start = new Date(d.getYear(), d.getMonth()-1, d.getDay())
+      theme1.timeline_stop  = d
+      
+      var bandInfos = [
+          Timeline.createBandInfo({
+              width:          45, // set to a minimum, autoWidth will then adjust
+              intervalUnit:   Timeline.DateTime.DAY, 
+              intervalPixels: 200,
+              eventSource:    eventSource1,
+              date:           d,
+              theme:          theme1,
+              layout:         'original'  // original, overview, detailed
+          })
+      ];
+                                                      
+      // create the Timeline
+      tl = Timeline.create(tl_el, bandInfos, Timeline.HORIZONTAL);
+      
+      var url = '.'; // The base url for image, icon and background image
+                     // references in the data
+      eventSource1.loadJSON(timeline_data, url); // The data was stored into the 
+                                                 // timeline_data variable.
+      tl.layout(); // display the Timeline
+  })
+  
+  var resizeTimerID = null;
+  function onResize() {
+      if (resizeTimerID == null) {
+          resizeTimerID = window.setTimeout(function() {
+              resizeTimerID = null;
+              tl.layout();
+          }, 500);
+      }
+  }
+</script>
+
+<div id='tl'></div>
