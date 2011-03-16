@@ -1,4 +1,5 @@
 class Door < ActiveRecord::Base
+  cattr_accessor :xml_rpc_uri
   set_table_name :door
   validates_presence_of :name
 
@@ -12,7 +13,7 @@ class Door < ActiveRecord::Base
   end
 
   include HTTParty
-  base_uri 'localhost:8080' 
+  base_uri File.read('config/xml_rpc.txt').strip
 
   def self.open(door_name)
     raise "no door name given" if door_name.empty?
