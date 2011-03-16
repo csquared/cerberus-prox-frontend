@@ -16,15 +16,9 @@
   </li>
 
   <% Door.all.each do |door| %>
-   <li><a href="#" class="open_door" id="<%= door.name %>">Open the <%= door.name %></a></li>
+   <li>
+      <a href="#" class="open_door" id="<%= door.name %>">Open the <%= door.name %></a>
+      <img class="activity door" id="<%= door.name %>_activity" src="/images/door-activity.gif" />
+  </li>
   <% end %>
 </ul>
-
-<script>
-  $(function(){
-    $('.open_door').click(function(event){
-      event.preventDefault();
-      $.get('/door/open/' + $(this).attr('id'))
-    })
-  })
-</script>

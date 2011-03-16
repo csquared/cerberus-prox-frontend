@@ -12,6 +12,7 @@ class Door < ActiveRecord::Base
   end
 
   include HTTParty
+  base_uri 'localhost:8080' 
 
   def self.open(door_name)
     raise "no door name given" if door_name.empty?

@@ -31,7 +31,20 @@ Capture.get_capture_at = function(time){
   })
 }
 
+Door = {}
+
+Door.open = function(name){
+  var activity$ = $('#' + name + '_activity').show()
+  $.get('/door/open/' + name, function(data){
+    activity$.fadeOut('slow')
+  })
+}
+
 $(function(){
   $('#card_capture button').click(Capture.button_clicked)
   $('#edit_id').click(function(){ $('#card_id').attr('disabled',false)})
+  $('.open_door').click(function(event){
+    event.preventDefault();
+    Door.open($(this).attr('id'))
+  })
 })

@@ -47,3 +47,8 @@ color: #339;
 }
 
 #card_capture span { display: none }
+
+
+.activity { display: none }
+
+.activity.door { width: 20px }
