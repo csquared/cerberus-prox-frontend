@@ -23,11 +23,22 @@ Feature:
     Given I am logged in
     When I go to "the new card page"
     And I press "Capture Card"
-    Then I should see "Swipe Card"
+    Then I should see "Stop Capture"
+
     When my card with code "1337" is denied 
     And I wait "3" seconds 
     Then the "card_id" field should contain "1337" 
-    And I should see "Card captured"
+
+  @javascript
+  Scenario: I can stop capture
+    Given I am logged in
+    When I go to "the new card page"
+    And I press "Capture Card"
+    And I press "Stop Capture"
+    And I wait "1" seconds 
+    Then the "card_id" field should contain "" 
+    And I should not find "Stop Capture"
+    And I should not find "Capturing"
 
   Scenario: Editing a card
     Given I am logged in

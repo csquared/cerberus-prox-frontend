@@ -1,23 +1,22 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-//
-
 Capture = {
   max_reqs: 100,
-  running: false
+  run: false
 }
 
-Capture.button_clicked = function(){
-  if( Capture.running ){
-    Capture.running = false
-    $('#card_capture span').hide()
-    $('#card_capture button').text('Capture Card')
-  }else{
-    Capture.running = true
-    $('#card_capture button').text('Stop')
-    $('#card_capture span').show()
-    Capture.get_capture_at(new Date(), 0)
-  }
+Capture.start = function(){
+  Capture.run = true
+  Capture.get_capture_at(new Date(), 0)
+  Capture.dialog$ = $('#capture_dialog').dialog({
+    modal: true,
+    title: "Capturing card",
+    close: function(){ Capture.stop() },
+    width: 400
+  })
+}
+
+Capture.stop = function(){
+  Capture.run = false
+  Capture.dialog$ && Capture.dialog$.dialog('close')
 }
 
 Capture.get_capture_at = function(time, req){
@@ -26,14 +25,13 @@ Capture.get_capture_at = function(time, req){
     data: {'capture_time' : time.toString()},
     type: "POST",
     success: function(data, testStatus, xhr){
-      if(Capture.running){
+      if(Capture.run){
         if(data.match("NOT FOUND") && req < Capture.max_reqs){
           setTimeout("Capture.get_capture_at('" + time.toString() + "'," + (req+1).toString() + " )", 2000)
         }else{
-          $('#card_capture button').text('Card captured!')
-          $('#card_capture button').show()
-          $('#card_capture span').hide()
           $('#card_id,#hidden_card_id').val(data)
+          $('#card_capture #message').text('Card captured!')
+          setTimeout(function(){ Capture.stop() }, 1000)
         }
       }
     },
@@ -56,9 +54,15 @@ Door.open = function(name){
 }
 
 $(function(){
+  //global
   $('button').button()
-  $('#card_capture button').click(Capture.button_clicked)
+
+  //edit card
+  $('#start_capture').click(Capture.start)
+  $('#stop_capture').click(Capture.stop)
   $('#edit_id').click(function(){ $('#card_id').attr('disabled',false)})
+  
+  //dashboard
   $('.open_door').click(function(event){
     event.preventDefault();
     Door.open($(this).attr('id'))

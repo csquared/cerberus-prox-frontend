@@ -49,18 +49,13 @@ color: #339;
 #card_capture span { display: none }
 
 
-.activity { display: none }
-
 .activity.door { width: 20px }
 
 .dialog{ 
   display: none;
-}
-
-
-#door_dialog {
   text-align: center
 }
+
 
 #door_dialog img{
   padding: 20px;

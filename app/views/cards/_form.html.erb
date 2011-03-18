@@ -15,10 +15,7 @@
     <label for="card_id">ID</label>
     <input type="input" id="card_id" name="card_id" disabled="true" value="<%=@card.id || params[:card_id]%>"/>
     <input type="hidden" id="hidden_card_id" name="hidden_card_id" value="<%= params[:card_id] %>"/>
-    <span id="card_capture">
-      <span><img src="/images/ajax-loader.gif" />Swipe Card...</span>
-      <button type="button">Capture Card</button>
-    </span>
+    <button type="button" id="start_capture">Capture Card</button>
     <button id="edit_id" type="button">Edit</button>
   </div>
 
@@ -68,3 +65,10 @@
   <% end %>
   </ul>
 <% end %>
+
+<div id="capture_dialog" class="dialog">
+  <p id="message">
+    Capturing the next DENY in the access log...<br/>
+  </p>
+  <button id="stop_capture">Stop Capture</button>  
+</div>
