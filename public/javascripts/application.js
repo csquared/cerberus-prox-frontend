@@ -46,13 +46,17 @@ Capture.get_capture_at = function(time, req){
 Door = {}
 
 Door.open = function(name){
-  var activity$ = $('#' + name + '_activity').show()
+  var dialog$ = $('#door_dialog').dialog({
+    modal: true,
+    title: 'Opening ' + name.replace(/_/,' ') + '.... '
+  })
   $.get('/door/open/' + name, function(data){
-    activity$.fadeOut('slow')
+    setTimeout(function(){dialog$.dialog('close')}, 1000)
   })
 }
 
 $(function(){
+  $('button').button()
   $('#card_capture button').click(Capture.button_clicked)
   $('#edit_id').click(function(){ $('#card_id').attr('disabled',false)})
   $('.open_door').click(function(event){

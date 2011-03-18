@@ -15,10 +15,12 @@
     View the <%= link_to 'Access Log', :controller => 'access_logs', :action => "timeline" %> 
   </li>
 
-  <% Door.all.each do |door| %>
-   <li>
-      <a href="#" class="open_door" id="<%= door.name %>">Open the <%= door.name %></a>
-      <img class="activity door" id="<%= door.name %>_activity" src="/images/door-activity.gif" />
-  </li>
-  <% end %>
 </ul>
+
+<% Door.all.each do |door| %>
+    <button class="open_door" id="<%= door.name %>">Open the <%= door.display_name %></button>
+<% end %>
+
+<div class="dialog" id="door_dialog">
+ <img src="/images/door-activity.gif" />
+</div>

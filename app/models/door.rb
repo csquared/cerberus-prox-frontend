@@ -12,6 +12,10 @@ class Door < ActiveRecord::Base
     self.default_unlocked ||= 'N'  
   end
 
+  def display_name
+    name.gsub('_',' ')
+  end
+
   include HTTParty
   base_uri File.read('config/xml_rpc.txt').strip
 

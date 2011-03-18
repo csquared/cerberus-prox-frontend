@@ -52,3 +52,16 @@ color: #339;
 .activity { display: none }
 
 .activity.door { width: 20px }
+
+.dialog{ 
+  display: none;
+}
+
+
+#door_dialog {
+  text-align: center
+}
+
+#door_dialog img{
+  padding: 20px;
+}
