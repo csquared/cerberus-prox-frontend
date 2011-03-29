@@ -5,6 +5,9 @@ This is a rails app that is meant to serve as a frontend to the [cerberus-prox p
 The Cerberus Prox is an application that interfaces with an open-source RFID reader design to enable
 swipecard access to the Austin HackerSpace.
 
+<img src="http://cerberus-prox.googlecode.com/files/photo.jpg" />
+<img src="http://cerberus-prox.googlecode.com/files/hid-strike_board.jpg" />
+
 Cerberus Prox is a java application that uses a MySQL database to store the data about Cards, Doors, and Access Priviledges
 (ie: is this card a known card? and do they have access to the door?)
 
@@ -24,5 +27,5 @@ Some cool features:
 
 
 
-We're actively developing this project at the [Austin Hackerspace](http://austinhackerspace.org) and are eager to
+We're actively developing this project at the [Austin Hackerspace](http://atxhackerspace.org) and are eager to
 start sharing with other spaces!
