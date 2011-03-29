@@ -1,10 +1,6 @@
 # cerberus-prox-frontend
 
-This is a rails app that is meant to serve as a frontend to the 
-cerberus-prox project at
-
-https://code.google.com/p/cerberus-prox/
-
+This is a rails app that is meant to serve as a frontend to the [cerberus-prox project](https://code.google.com/p/cerberus-prox/)
 
 The Cerberus Prox is an application that interfaces with an open-source RFID reader design to enable
 swipecard access to the Austin HackerSpace.
@@ -28,5 +24,5 @@ Some cool features:
 
 
 
-We're actively developing this project at the Austin Hackerspace and are eager to
+We're actively developing this project at the [Austin Hackerspace](http://austinhackerspace.org) and are eager to
 start sharing with other spaces!
