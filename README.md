@@ -20,6 +20,7 @@ UNTIL NOW!
 The Cerberus Prox Frontend is a tested Rails 3 applicaiton that allows easy administration of the doorsystem.
 
 Some cool features:
+
 * Simple administration of cards, doors, and access priviledges
 * Card Capture system instead of keying the card manually (if you don't know its ID)
 * When XML-RPC is enabled, the dashboard allows you to open any door from the web interface
